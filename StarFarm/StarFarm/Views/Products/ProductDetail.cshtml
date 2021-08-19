@@ -1,0 +1,97 @@
+﻿@model  StarFarm.Models.Product
+
+@{
+    ViewBag.Title = "ProductDetail";
+}
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/css/animate.css" rel="stylesheet" />
+<link href="~/Content/css/productDetail.css" rel="stylesheet" />
+<h2>ProductDetail</h2>
+
+<div class="container">
+    <ul class="breadcrumb " style="--bs-breadcrumb-divider:'>';">
+        <li class="breadcrumb-item">
+            <a class="text-decoration-none link-dark" href="home.html">
+                <i class="fas fa-home"></i>Home
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a class="text-decoration-none link-dark" href="products.html"> Products</a>
+        </li>
+
+        <li class="breadcrumb-item active" id="breadcrumbname">
+           @Model.Product_Name
+        </li>
+    </ul>
+
+</div>
+<main class="wrapper">
+    <div class="container my-3 " id="products">
+
+        <div class="row d-md-flex  ">
+
+            <div id="carousel" class="col col-md- col-lg carousel slide carousel-fade " data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button data-bs-target="#carousel" data-bs-slide-to="0" class="active "></button>
+                    <button data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="@Model.Image" class="w-100 d-block" id="image" alt="">
+
+                    </div>
+                    <div class="carousel-item carousel-dark" data-bs-interval="5000">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png" class="w-100 d-block" id="image2" alt="">
+
+                    </div>
+                    <button class="carousel-control-prev  carousel-dark " data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next carousel-dark" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col col-md- col-lg right">
+                <div>
+                    <h2 id="productname">@Model.Product_Name </h2>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no"><span id="review"></span> reviews</span>
+                    </div>
+                </div>
+
+                <h4 class="price">current price: <strong id="price">@Model.Price $</strong></h4>
+
+                <div class="action">
+                    <a href="#" type="button" class="btn modalToAddCard" onclick=" addtocartdetail();"> ADD TO CART </a>
+                    <a href="cart.html" type="button" class="btn buy"> BUY NOW </a>
+
+                </div>
+                <div id="description">
+                    @Html.Raw(Model.Description)
+                </div>
+
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-3"></div>
+            <div class="col-6 recommended">
+                <h3>RECOMMENDED FOR YOU</h3>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div id="recommended" class="row row-cols-1 row-cols-md-5 gx-3">
+
+        </div>
+
+
+    </div>
+</main>
