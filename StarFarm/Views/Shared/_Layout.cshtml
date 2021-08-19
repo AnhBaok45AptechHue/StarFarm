@@ -4,8 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="@ViewBag.Title -My ASP.Net Application" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/CSS/footer.css")
+    @Styles.Render("~/Content/boostrap.min.css.map")
+    @Scripts.Render("~/Content/CSS/font-awesome.min.css")
+    @Scripts.Render("~/Content/CSS/navigation.css")
+    @Scripts.Render("~Content/CSS/main.css")
+    @RenderSection("css", required: false)
+
+    @Scripts.Render("~/Content/JS/jquery-3.3.3.min.js")
+    @Scripts.Render("~/Content/JS/popper.min.js")
+    @Scripts.Render("~/Content/libary/bootstrap/js/kit.fontawesome.js")  
+    @Scripts.Render("~/Content/libary/bootstrap/js/bootstrap.bundle2.js")
+    @Scripts.Render("~/Content/libary/bootstrap/js/bootstrap.min.js")
+    @RenderSection("scripts", required: false)
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,10 +43,161 @@
         </div>
     </div>
     <div class="container body-content">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+        <nav>
+            <div class="brand">
+                <!-- <h2></h2> -->
+            </div>
+            <div class="content">
+                <div>
+                    <ul>
+                        <li><a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="aboutUs.html"><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
+                        <li><a href="products.html"><i class="fa fa-product-hunt" aria-hidden="true"></i> PRODUCTS</a></li>
+                        <li><a href="contactUs.html"><i class="fa fa-telegram" aria-hidden="true"></i> CONTACT US</a></li>
+                        <li>
+                            <form class="d-flex justify-content-between pt-3">
+                                <input id="myInput" class="form-control me-2" type="text " placeholder="Search">
+                                <button class="btn" onclick="search(); return false;">Search</button>
+                            </form>
+                        </li>
+                        <li>
+                            <div id="cartcontent" class="d-flex justify-content-between pt-3">
+
+                                <button id="cart" class="btn  " data-bs-toggle="modal" data-bs-target="#myModal">
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <div id="myModal" class="modal ">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Shopping Cart </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body  ">
+
+                                                <table class="table table-responsive table-borderless">
+                                                    <thead>
+
+                                                    <th>&nbsp;</th>
+                                                    <th>Product</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th>total</th>
+                                                    <th>&nbsp;</th>
+                                                    </thead>
+                                                    <tbody id="modalCardDetail">
+                                                    </tbody>
+
+                                                </table>
+                                                <div class="totals">
+                                                    <div class="totals-item">
+                                                        <label>Subtotal</label>
+                                                        <div class="totals-value cart-subtotal"></div>
+                                                    </div>
+                                                    <div class="totals-item">
+                                                        <label>Tax (5%)</label>
+                                                        <div class="totals-value" id="cart-tax"></div>
+                                                    </div>
+                                                    <div class="totals-item">
+                                                        <label>Shipping</label>
+                                                        <div class="totals-value" id="cart-shipping">6.17</div>
+                                                    </div>
+                                                    <div class="totals-item totals-item-total">
+                                                        <label>Grand Total</label>
+                                                        <div class="totals-value" id="cart-total"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn buy">Buy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+                        <li><a href="login.html" class="d-flex justify-content-between pt-3"><i class="fas fa-user-circle"></i></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <!-- footercollapse -->
+        <div class="container-fluid text-center footercollapsecontainer">
+            <a id="footercollapse"> <img src="~/Content/Image/quicklink.png" class="img-responsive" style="margin:auto;"></a>
+        </div>
+        <footer class="">
+            <div class="container footer1">
+                <div class="col py-4 px-4">
+                    <div style="border-bottom: 1px solid black" class="row-2 ">
+                        <!-- <img height="50" src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"> -->
+                        <div>
+                            <!-- class="fa-ul mt-1" -->
+                            <h5 class="fw-bold">Us Products - </h5>
+                            <p class="fw-bold">
+                                <a href="HTML/productNutritiousCereals.html">Nutritious cereals</a>
+                                <a href="HTML/productPulses.html">Pulses</a>
+                                <a href="HTML/productSpicesAndCondiments.html">Spices and Condiments</a>
+                                <a href="HTML/productCookingOils&Oils.html">Cooking Oils</a>
+                                <a href="HTML/productFruitPulps.html">Fruit Pulps</a>
+                                <a href="HTML/productAgroProducts.html">Agro Products</a>
+                                <a href="HTML/productCookingOils&Oils.html">Oils</a>
+                                <a href="HTML/productWheatAndWheatFlour.html">Wheat and Wheat Flour</a>
+                                <a href="HTML/productRiceAndRiceProducts.html">Rice and Rice products</a>
+                                <a href="HTML/products.html">And so on</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col row">
+                        <div id="footer-location" class=" py-3">
+                            <h5 class="fw-bold">Location</h5>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.3213280015752!2d107.57922301472155!3d16.45925928864103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a149ef807aed%3A0x4eb6bafb31d4c653!2zSHXhur8gQXB0ZWNo!5e0!3m2!1svi!2s!4v1625646135953!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class="col py-3 quick-links">
+                            <h5 class="fw-bold">Get In Touch</h5>
+                            <ul id="get-in-touch" class="list-unstyled text-light">
+                                <li>6 Lê Lợi, Vĩnh Ninh, Thành phố Huế, Thừa Thiên Huế, Việt Nam</li>
+                                <a href="#">
+                                <li>starorganicvnpro@gmail.com</li></a>
+                                <a href="#">
+                                <li>+84 234.91000</li></a>
+                            </ul>
+                        </div>
+                        <div class="col py-3 quick-links">
+                            <h5 class="fw-bold">Quick Links</h5>
+                            <ul class="list-unstyled text-light">
+                                <li><a href="HTML/sitemap.html">Sitemap</a></li>
+                                <li><a href="HTML/aboutUs.html">About Us</a></li>
+                                <li><a href="HTML/products.css">Shopping now</a></li>
+                                <li><a href="HTML/contactUs.html">Contact Us</a></li>
+                                <li><a href="HTML/login.html">Register</a></li>
+                                <li><a href="HTML/cart.html">Cart</a></li>
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="social-network" class="container">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer2"></div>
         </footer>
     </div>
 

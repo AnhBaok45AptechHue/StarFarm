@@ -1,0 +1,34 @@
+main {
+	/*height: 900px;*/
+}
+main h2 {
+	color: #666666;
+	padding-top: 20px;
+}
+main a {
+	text-decoration: none;
+	color: gray;
+}
+main a:hover {
+	color: #9cd022;
+}
+main p {
+	font-size: 25px;
+}
+#bgh2{
+	background-color: #DDDDDD;
+	height: 80px;
+	text-align: center;
+
+}
+#img-sitemap {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+#img-sitemap img {
+	width: 500px;
+}
+#left {
+	float: left;
+}
