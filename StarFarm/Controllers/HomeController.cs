@@ -27,5 +27,12 @@ namespace StarFarm.Controllers
 
             return View();
         }
+
+        public ActionResult Sitemap()
+        {
+            ViewBag.Message = "Your Sitemap page.";
+
+            return View();
+        }
     }
 }
