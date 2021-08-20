@@ -150,14 +150,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\aboutUs.css" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\contacus.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\productDetail.css" />
     <Content Include="Content\css\products.css" />
+    <Content Include="Content\images\email.png" />
+    <Content Include="Content\images\ff.jpg" />
+    <Content Include="Content\images\location.png" />
+    <Content Include="Content\images\phone.png" />
+    <Content Include="Content\images\shape.png" />
+    <Content Include="Content\images\wave.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\ADMIN\Views\web.config" />
@@ -527,6 +537,7 @@
     <Content Include="Scripts\ckeditor\skins\v2\skin.js" />
     <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
     <Content Include="Scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -536,7 +547,13 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kit.fontawesome.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\productAgroProducts.js" />
+    <Content Include="Scripts\productCookingOils&amp;Oils.js" />
+    <Content Include="Scripts\productDetail.js" />
+    <Content Include="Scripts\wow.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
