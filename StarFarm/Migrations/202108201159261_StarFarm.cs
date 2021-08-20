@@ -1,9 +1,9 @@
-﻿namespace StarFarm.Migrations
+namespace StarFarm.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class updateDatabase : DbMigration
+    public partial class StarFarm : DbMigration
     {
         public override void Up()
         {

@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Areas/ADMIN/Views/_ViewStart.cshtml";
+}
+<link href="~/Content/css/cart.css" rel="stylesheet" />
+
+<h2>Cart</h2>
+<div class="container">
+    <ul class="breadcrumb" style="--bs-breadcrumb-divider:'>';">
+        <li class="breadcrumb-item">
+            <a class="text-decoration-none link-dark" href="../index.html">
+                <i class="fas fa-home"></i>Home
+            </a>
+        </li>
+        <li class="breadcrumb-item active">
+            SHOPPING CARD
+        </li>
+    </ul>
+</div>
+<!-- Main -->
+<div class="container my-3">
+
+    <div>
+        <h2>item in your card</h2>
+    </div>
+
+    <div class="container">
+        <div class="table-wrap">
+            <table class="table table-responsive table-borderless">
+                <thead>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>total</th>
+                <th>&nbsp;</th>
+                </thead>
+                <tbody>
+                    <tr class="align-middle alert border-bottom product" role="alert">
+
+                        <td class="text-center">
+                            <img class="" src="../image/1.2.1.jpg" alt="Organic Spelt Flakes, 12 oz (340 g)">
+                        </td>
+                        <td>
+                            <div>
+                                <p class="m-0 fw-bold">Organic Spelt Flakes, 12 oz (340 g) </p>
+
+                            </div>
+                        </td>
+                        <td class="product-price">
+                            <div class="fw-600">8.42$</div>
+                        </td>
+                        <td class="d-flex product-quantity">
+                            <input class="input" min="0" value="1" type="number" id="itemPrice">
+                        </td>
+                        <td class="product-line-price"> <span id="itemTotal"></span> $</td>
+                        <td class="product-removal">
+                            <button class="btn ">
+                                <span class="fas fa-times"></span>
+                            </button>
+
+                        </td>
+                    </tr>
+         
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <div>
+            <div class="totals">
+                <div class="totals-item">
+                    <label>Subtotal</label>
+                    <div class="totals-value cart-subtotal"></div>
+                </div>
+                <div class="totals-item">
+                    <label>Tax (5%)</label>
+                    <div class="totals-value" id="cart-tax"></div>
+                </div>
+                <div class="totals-item">
+                    <label>Shipping</label>
+                    <div class="totals-value" id="cart-shipping">6.17</div>
+                </div>
+                <div class="totals-item totals-item-total">
+                    <label>Grand Total</label>
+                    <div class="totals-value" id="cart-total"></div>
+                </div>
+            </div>
+            <div class="checkOut">
+                <button type="button" class="btn continute">
+                    <a href="products.html"> <i class="fas fa-cart-arrow-down"></i> Continue Shopping</a>
+                </button>
+
+                <button type="button" class="btn btn-success buy ">
+                    <a href="login.html">Checkout</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
