@@ -95,7 +95,7 @@ main p {
      font-family: Perpetua;
 }
 #main-1-background{
-     background-image: url(../img/heroimg3.jpg);
+     background-image: url(~/Content/Image/heroimg3.jpg);
      background-size: 100%;
 }
 #main-1{

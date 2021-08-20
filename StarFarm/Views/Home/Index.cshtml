@@ -2,158 +2,175 @@
     ViewBag.Title = "Home Page";
 }
 
+@section css
+{
+    <link href="~/Content/CSS/font-roboto.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/CSS/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/CSS/animate.css">
+    <link rel="stylesheet" href="~/Content/CSS/main.css">
+}
 
-<body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
-    
-   
-    <!-- --- Carousel --- -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+@section scripts
+{
+    <script type="text/javascript" src="~/Content/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/popper.min.js"></script>
+    <script type="text/javascript" src="~/Content/libary/bootstrap/js/kit.fontawesome.js"></script>
+    <script type="text/javascript" src="~/Content/libary/bootstrap/js/bootstrap.bundle2.js"></script>
+    <script type="text/javascript" src="~/Content/libary/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/wow.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+
+}
+
+
+<!-- --- Carousel --- -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+
+        <div id="div-slide1" class="carousel-item active">
+            <img id="slide1" src="~/Content/Image/slide.jpg" class="d-block" alt="...">
+            <div class="carousel-caption">
+                <div id="title">
+                    <h3>Welcome to Organic Star Farm.</h3>
+                    <p>Organic Star is an organic farm, we specialize in the production and supply of organic products. We guarantee that our products are organic and that our products are safe for your family.</p>
+                </div>
+                <a href="HTML/products.html"><button class="btn">See all</button></a>
+            </div>
         </div>
-        <div class="carousel-inner">
 
-            <div id="div-slide1" class="carousel-item active">
-                <img id="slide1" src="img/slide.jpg" class="d-block" alt="...">
-                <div class="carousel-caption">
-                    <div id="title">
-                        <h3>Welcome to Organic Star Farm.</h3>
-                        <p>Organic Star is an organic farm, we specialize in the production and supply of organic products. We guarantee that our products are organic and that our products are safe for your family.</p>
-                    </div>
-                    <a href="HTML/products.html"><button class="btn">See all</button></a>
-                </div>
+        <div class="carousel-item">
+            <!-- <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-fresh-fruit-and-vegetable-mall-poster-psd-image_160759.jpg" class="d-block w-100" alt="..."> -->
+            <!-- <img src="img/slide2.jpg" class="d-block " alt="...">
+            <img src="img/slide2.jpg" class="d-block " alt="..."> -->
+            <img id="slide2" src="~/Content/Image/slide2.jpg" class="d-block " alt="...">
+            <img id="slide3" src="~/Content/Image/slide2.jpg" class="d-block " alt="...">
+            <div class="carousel-caption">
+                <h5>Organic Pulses</h5>
+                <p></p>
+                <a href="HTML/productPulses.html"><button class="btn">See more</button></a>
             </div>
+        </div>
 
-            <div class="carousel-item">
-                <!-- <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-fresh-fruit-and-vegetable-mall-poster-psd-image_160759.jpg" class="d-block w-100" alt="..."> -->
-                <!-- <img src="img/slide2.jpg" class="d-block " alt="...">
-                <img src="img/slide2.jpg" class="d-block " alt="..."> -->
-                <img id="slide2" src="img/slide2.jpg" class="d-block " alt="...">
-                <img id="slide3" src="img/slide2.jpg" class="d-block " alt="...">
-                <div class="carousel-caption">
-                    <h5>Organic Pulses</h5>
-                    <p></p>
-                    <a href="HTML/productPulses.html"><button class="btn">See more</button></a>
-                </div>
+        <div class="carousel-item">
+            <img src="~/Content/Image/heroimg4.jpg." class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+                <a href="HTML/productAgroProducts.html"><button id="btn-3" class="btn">See more</button></a>
             </div>
-
-            <div class="carousel-item">
-                <img src="img/heroimg4.jpg." class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <a href="HTML/productAgroProducts.html"><button id="btn-3" class="btn">See more</button></a>
-                </div>
-
-            </div>
-
 
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div></div>
-    <!------- Kết thúc Carousel ------->
-    <div id="middler"></div>
-    <!-- -MAIN------------------------------------------------------- -->
-    <center>
-        <main>
-            <!--  main 1 -->
-            <div id="main-1-background" class="">
-                <div id="main-1" class="container">
-                    <h3>Star Ogarnic - Asia's Leading Brand of Organic Food</h3>
-                    <img class="wow bounceInUp" src="img/line.png">
-                    <p class="wow bounceInUp" data-wow-delay="1s">‘Star Organic’ has grown on the principles of health, ecology, and care. We believe in working with a large number of accredited farmers who do not use or promote the use of pesticides and genetically modified seeds to grow their produce. We aim to give our customers a healthy chemical-free meal for the perfect nutrition.</p>
+
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div></div>
+<!------- Kết thúc Carousel ------->
+<div id="middler"></div>
+<!-- -MAIN------------------------------------------------------- -->
+<center>
+    <main>
+        <!--  main 1 -->
+        <div id="main-1-background" class="" style="background-image : url(~/Content/Image/heroimg3.jpg)">
+            <div id="main-1" class="container">
+                <h3>Star Ogarnic - Asia's Leading Brand of Organic Food</h3>
+                <img class="wow bounceInUp" src="~/Content/Image/line.png">
+                <p class="wow bounceInUp" data-wow-delay="1s">‘Star Organic’ has grown on the principles of health, ecology, and care. We believe in working with a large number of accredited farmers who do not use or promote the use of pesticides and genetically modified seeds to grow their produce. We aim to give our customers a healthy chemical-free meal for the perfect nutrition.</p>
+            </div>
+        </div>
+        <!-- -------Main2!!!--------- -->
+        <div id="main-2-1" class="">
+            <h3>Why Should Sou Shoose Star Organic?</h3>
+            <img class="wow bounceInUp" src="~/Content/Image/line.png">
+            <div id="main-2" class="row container ">
+                <div class="main-2-why">
+                    <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_01-150x150.png">
+                    <h5>High Nutritional Value</h5>
+                    <p class="wow bounceInUp">Organic foods preserve far more natural vitamins and minerals</p>
+                </div>
+                <div class="main-2-why">
+                    <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_02-150x150.png">
+                    <h5>No Chemicals & Pesticides</h5>
+                    <p class="wow bounceInUp" data-wow-delay="0.5s">We don’t use artificial fertilisers or additives in our food</p>
+                </div>
+                <div class="main-2-why">
+                    <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_03-150x150.png">
+                    <h5>Certified Organic Sources</h5>
+                    <p class="wow bounceInUp" data-wow-delay="1s">Our products are strictly quality controlled and independently verified</p>
+                </div>
+                <div class="main-2-why">
+                    <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_04-150x150.png">
+                    <h5>Preserves the Environment</h5>
+                    <p class="wow bounceInUp" data-wow-delay="1.5s">Sustainable farming ensures soil conversation & reduced air pollution</p>
                 </div>
             </div>
-            <!-- -------Main2!!!--------- -->
+        </div>
+        <!----------- Main 3 --------------->
+        <div id="background-1">
             <div id="main-2-1" class="">
-                <h3>Why Should Sou Shoose Star Organic?</h3>
-                <img class="wow bounceInUp" src="img/line.png">
-                <div id="main-2" class="row container ">
-                    <div class="main-2-why">
-                        <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_01-150x150.png">
-                        <h5>High Nutritional Value</h5>
-                        <p class="wow bounceInUp">Organic foods preserve far more natural vitamins and minerals</p>
+                <h3>Our Organic Range</h3>
+                <img class="wow bounceInUp" src="~/Content/Image/line.png">
+                <div id="main-3" class="row container">
+                    <div class="main-3-products">
+                        <a href="HTML/productNutritiousCereals.html"><img src="img/cereals.png"></a>
+                        <h6 class="wow bounceInUp">Nutritious Cereals</h6>
                     </div>
-                    <div class="main-2-why">
-                        <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_02-150x150.png">
-                        <h5>No Chemicals & Pesticides</h5>
-                        <p class="wow bounceInUp" data-wow-delay="0.5s">We don’t use artificial fertilisers or additives in our food</p>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productFruitPulps.html"><img src="img/fruit-pulps.png"></a>
+                        <h6 class="wow bounceInUp">Fruit Pulps</h6>
                     </div>
-                    <div class="main-2-why">
-                        <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_03-150x150.png">
-                        <h5>Certified Organic Sources</h5>
-                        <p class="wow bounceInUp" data-wow-delay="1s">Our products are strictly quality controlled and independently verified</p>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productAgroProducts.html"><img src="img/fruits.png"></a>
+                        <h6 class="wow bounceInUp">Agro Products</h6>
                     </div>
-                    <div class="main-2-why">
-                        <img src="https://www.organictattva.com/wp-content/uploads/2019/01/Icons_04-150x150.png">
-                        <h5>Preserves the Environment</h5>
-                        <p class="wow bounceInUp" data-wow-delay="1.5s">Sustainable farming ensures soil conversation & reduced air pollution</p>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productWheatAndWheatFlour.html"><img src="img/flours.png"></a>
+                        <h6 class="wow bounceInUp">Wheat and Wheat Flour</h6>
                     </div>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productCookingOils&Oils.html"><img src="img/oils.png"></a>
+                        <h6 class="wow bounceInUp">Cooking Oils & Oils</h6>
+                    </div>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productPulses.html"><img src="img/pulses.png"></a>
+                        <h6 class="wow bounceInUp">Pulses</h6>
+                    </div>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productRiceAndRiceProducts.html"><img src="img/rice.png"></a>
+                        <h6 class="wow bounceInUp">Rice Products</h6>
+                    </div>
+
+                    <div class="main-3-products">
+                        <a href="HTML/productSpicesAndCondiments.html"><img src="img/ground-spices.png"></a>
+                        <h6 class="wow bounceInUp">Spices and Condiments</h6>
+                    </div>
+
                 </div>
             </div>
-            <!----------- Main 3 --------------->
-            <div id="background-1">
-                <div id="main-2-1" class="">
-                    <h3>Our Organic Range</h3>
-                    <img class="wow bounceInUp" src="img/line.png">
-                    <div id="main-3" class="row container">
-                        <div class="main-3-products">
-                            <a href="HTML/productNutritiousCereals.html"><img src="img/cereals.png"></a>
-                            <h6 class="wow bounceInUp">Nutritious Cereals</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productFruitPulps.html"><img src="img/fruit-pulps.png"></a>
-                            <h6 class="wow bounceInUp">Fruit Pulps</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productAgroProducts.html"><img src="img/fruits.png"></a>
-                            <h6 class="wow bounceInUp">Agro Products</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productWheatAndWheatFlour.html"><img src="img/flours.png"></a>
-                            <h6 class="wow bounceInUp">Wheat and Wheat Flour</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productCookingOils&Oils.html"><img src="img/oils.png"></a>
-                            <h6 class="wow bounceInUp">Cooking Oils & Oils</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productPulses.html"><img src="img/pulses.png"></a>
-                            <h6 class="wow bounceInUp">Pulses</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productRiceAndRiceProducts.html"><img src="img/rice.png"></a>
-                            <h6 class="wow bounceInUp">Rice Products</h6>
-                        </div>
-
-                        <div class="main-3-products">
-                            <a href="HTML/productSpicesAndCondiments.html"><img src="img/ground-spices.png"></a>
-                            <h6 class="wow bounceInUp">Spices and Condiments</h6>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+        </div>
 
 
-    </center>
+</center>
     </main>
-    <!-- Ket thuc MAIN -->
 
-    
 
