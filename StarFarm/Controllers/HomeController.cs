@@ -1,4 +1,5 @@
 ﻿
+using StarFarm.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,25 @@ namespace StarFarm.Controllers
 
             return View();
         }
+
+        // POST: ContactUs/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact([Bind(Include = "ID,User_Name,Email,Phone,Message")] ContactU contactU)
+        {
+            StarFarmProjectModels db = new StarFarmProjectModels();
+            if (ModelState.IsValid)
+            {
+                db.ContactUs.Add(contactU);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(contactU);
+        }
+
 
         public ActionResult Sitemap()
         {

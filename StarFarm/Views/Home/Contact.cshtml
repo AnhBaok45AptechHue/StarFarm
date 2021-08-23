@@ -1,7 +1,8 @@
-﻿@{
+﻿@model StarFarm.Models.ContactU
+@{
     ViewBag.Title = "Contact";
 }
-
+<link rel="stylesheet" href="~/Content/CSS/contacus.css" />
 <main>
     <div class="container  my-3">
         <span class="big-circle"></span>
@@ -20,15 +21,15 @@
                 <div class="info">
                     <div class="information">
                         <img src="~/Content/images/location.png" class="icon" alt="" />
-                        <p></p>
+                        <p>6 Lê Lợi, Vĩnh Ninh, Thành phố Huế, Thừa Thiên Huế, Việt Nam</p>
                     </div>
                     <div class="information">
                         <img src="~/Content/images/email.png" class="icon" alt="" />
-                        <p>nquocbao28@gmail.com</p>
+                        <p> starorganicvnpro@gmail.com</p>
                     </div>
                     <div class="information">
                         <img src="~/Content/images/phone.png" class="icon" alt="" />
-                        <p>0358637152</p>
+                        <p>+84 234.91000</p>
                     </div>
                 </div>
                 <div class="social-media">
@@ -37,11 +38,11 @@
                         <a href="https://www.facebook.com/" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/?lang=vi">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
                         <a href="#">
                             <i class="fab fa-linkedin-in"></i>
@@ -52,26 +53,29 @@
             <div class="contact-form">
                 <span class="circle one"></span>
                 <span class="circle two"></span>
-                <form action="index.html" autocomplete="off">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
                     <h3 class="title">Contact us</h3>
                     <div class="input-container">
-                        <input type="text" name="name" class="input " placeholder="Username" />
-                        <label for="name"></label>
+                        @Html.EditorFor(model => model.User_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.User_Name, "", new { @class = "text-danger" })
                     </div>
                     <div class="input-container">
-                        <input type="email" name="email" class="input" placeholder="Email" />
-                        <label for="email"></label>
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                     </div>
                     <div class="input-container">
-                        <input type="tel" name="phone" class="input" placeholder="Phone" />
-                        <label for="phone"></label>
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                     </div>
                     <div class="input-container textarea">
-                        <textarea name="message" class="input" placeholder="Message"></textarea>
-                        <label for="message"></label>
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                     </div>
                     <input type="submit" value="Send" class="btn" />
-                </form>
+                }
             </div>
         </div>
     </div>

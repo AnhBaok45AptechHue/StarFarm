@@ -132,21 +132,18 @@
     <Compile Include="Areas\ADMIN\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\ADMIN\Controllers\CustomersController.cs" />
     <Compile Include="Areas\ADMIN\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\ADMIN\Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108101245457_updateDatabase.cs" />
-    <Compile Include="Migrations\202108101245457_updateDatabase.designer.cs">
-      <DependentUpon>202108101245457_updateDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ContactU.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\roductImage.cs" />
     <Compile Include="Models\StarFarmProjectModels.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -689,6 +686,12 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\ProductDetail.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Areas\ADMIN\Views\ContactUs\Create.cshtml" />
+    <Content Include="Areas\ADMIN\Views\ContactUs\Delete.cshtml" />
+    <Content Include="Areas\ADMIN\Views\ContactUs\Details.cshtml" />
+    <Content Include="Areas\ADMIN\Views\ContactUs\Edit.cshtml" />
+    <Content Include="Areas\ADMIN\Views\ContactUs\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
