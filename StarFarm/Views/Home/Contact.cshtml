@@ -1,17 +1,87 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<main>
+    <div class="container  my-3">
+        <span class="big-circle"></span>
+        <img src="~/Content/images/shape.png" class="square" alt="" />
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                    Star Organic farm is commenced in the year 1988. Company is involved in trading
+                    and manufacturing a wide range of Organic Products and spices to the consumers all
+                    around the global market. Company has wide variety of collection of products lies of
+                    Nutritious cereals, Pulses, Spices and Condiments, Cooking Oils, Fruit Pulps,
+                    Agro Products, Oils, Wheat and Wheat Flour, Rice and Rice products and so
+                    on.
+                </p>
+                <div class="info">
+                    <div class="information">
+                        <img src="~/Content/images/location.png" class="icon" alt="" />
+                        <p></p>
+                    </div>
+                    <div class="information">
+                        <img src="~/Content/images/email.png" class="icon" alt="" />
+                        <p>nquocbao28@gmail.com</p>
+                    </div>
+                    <div class="information">
+                        <img src="~/Content/images/phone.png" class="icon" alt="" />
+                        <p>0358637152</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <p>Connect with us :</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+                <form action="index.html" autocomplete="off">
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input " placeholder="Username" />
+                        <label for="name"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" placeholder="Email" />
+                        <label for="email"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" placeholder="Phone" />
+                        <label for="phone"></label>
+                    </div>
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input" placeholder="Message"></textarea>
+                        <label for="message"></label>
+                    </div>
+                    <input type="submit" value="Send" class="btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="~/Scripts/popper.min.js"></script>
+<script type="text/javascript" src="~/Scripts/kit.fontawesome.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/Scripts/wow.min.js"></script>
+
+

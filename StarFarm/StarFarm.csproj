@@ -132,19 +132,14 @@
     <Compile Include="Areas\ADMIN\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\ADMIN\Controllers\CustomersController.cs" />
     <Compile Include="Areas\ADMIN\Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108201159261_StarFarm.cs" />
-    <Compile Include="Migrations\202108201159261_StarFarm.Designer.cs">
-      <DependentUpon>202108201159261_StarFarm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108201208543_change price to double.cs" />
-    <Compile Include="Migrations\202108201208543_change price to double.Designer.cs">
-      <DependentUpon>202108201208543_change price to double.cs</DependentUpon>
+    <Compile Include="Migrations\202108101245457_updateDatabase.cs" />
+    <Compile Include="Migrations\202108101245457_updateDatabase.designer.cs">
+      <DependentUpon>202108101245457_updateDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -152,16 +147,30 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\roductImage.cs" />
     <Compile Include="Models\StarFarmProjectModels.cs" />
-    <Compile Include="Models\ViewModel\CartItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\aboutUs.css" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\contacus.css" />
     <Content Include="Content\css\cart.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\productDetail.css" />
     <Content Include="Content\css\products.css" />
+    <Content Include="Content\Image\heroimg3.jpg" />
+    <Content Include="Content\Image\heroimg4.jpg" />
+    <Content Include="Content\Image\line.png" />
+    <Content Include="Content\Image\logo %282%29.png" />
+    <Content Include="Content\Image\slide.jpg" />
+    <Content Include="Content\Image\slide2.jpg" />
+    <Content Include="Content\Image\sitemap.jpg" />
+    <Content Include="Content\images\email.png" />
+    <Content Include="Content\images\ff.jpg" />
+    <Content Include="Content\images\location.png" />
+    <Content Include="Content\images\phone.png" />
+    <Content Include="Content\images\shape.png" />
+    <Content Include="Content\images\wave.png" />
     <Content Include="Content\image\1.1.1.jpg" />
     <Content Include="Content\image\1.1.2.jpg" />
     <Content Include="Content\image\1.2.1.jpg" />
@@ -281,6 +290,8 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\ADMIN\Views\web.config" />
@@ -651,6 +662,7 @@
     <Content Include="Scripts\ckeditor\skins\v2\skin.js" />
     <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
     <Content Include="Scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -660,7 +672,13 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kit.fontawesome.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\productAgroProducts.js" />
+    <Content Include="Scripts\productCookingOils&amp;Oils.js" />
+    <Content Include="Scripts\productDetail.js" />
+    <Content Include="Scripts\wow.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -678,6 +696,7 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\ProductDetail.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Home\Sitemap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
