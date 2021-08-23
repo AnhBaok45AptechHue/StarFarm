@@ -8,7 +8,7 @@
 <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
 <link href="~/Content/css/animate.css" rel="stylesheet" />
 <link href="~/Content/css/products.css" rel="stylesheet" />
-<h2>Index</h2>
+
 
 <main>
 
@@ -72,7 +72,7 @@
                                     <div class="col-4">
                                         <div class="h5 font-weight-bold cardPrice">$"@prod.Price</div>
                                     </div>
-                                    <div class="col-8"><a href="@Url.Action("AddToCart", new { controller = "Cart", id ="prod.Product_Id" })" type="button" class="btn modalToAddCard" id="@prod.Product_Id"> Add to cart </a></div>
+                                    <div class="col-8"><a href="@Url.Action("AddToCart", new { controller = "Cart", id =prod.Product_Id })" type="button" class="btn modalToAddCard" id="@prod.Product_Id"> Add to cart </a></div>
                                 </div>
                             </div>
                         </div>
@@ -80,6 +80,7 @@
                 }
             </div>
         </section>
+
 
     </div>
 </main>
