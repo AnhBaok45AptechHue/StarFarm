@@ -137,10 +137,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108101245457_updateDatabase.cs" />
-    <Compile Include="Migrations\202108101245457_updateDatabase.designer.cs">
-      <DependentUpon>202108101245457_updateDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -160,6 +156,10 @@
     <Content Include="Content\css\products.css" />
     <Content Include="Content\Image\heroimg3.jpg" />
     <Content Include="Content\Image\heroimg4.jpg" />
+    <Content Include="Content\Image\Icons_01-150x150.png" />
+    <Content Include="Content\Image\Icons_02-150x150.png" />
+    <Content Include="Content\Image\Icons_03-150x150.png" />
+    <Content Include="Content\Image\Icons_04-150x150.png" />
     <Content Include="Content\Image\line.png" />
     <Content Include="Content\Image\logo %282%29.png" />
     <Content Include="Content\Image\slide.jpg" />
