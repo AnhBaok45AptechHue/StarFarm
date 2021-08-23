@@ -155,6 +155,17 @@
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\productDetail.css" />
     <Content Include="Content\css\products.css" />
+    <Content Include="Content\Image\heroimg3.jpg" />
+    <Content Include="Content\Image\heroimg4.jpg" />
+    <Content Include="Content\Image\Icons_01-150x150.png" />
+    <Content Include="Content\Image\Icons_02-150x150.png" />
+    <Content Include="Content\Image\Icons_03-150x150.png" />
+    <Content Include="Content\Image\Icons_04-150x150.png" />
+    <Content Include="Content\Image\line.png" />
+    <Content Include="Content\Image\logo %282%29.png" />
+    <Content Include="Content\Image\slide.jpg" />
+    <Content Include="Content\Image\slide2.jpg" />
+    <Content Include="Content\Image\sitemap.jpg" />
     <Content Include="Content\images\email.png" />
     <Content Include="Content\images\ff.jpg" />
     <Content Include="Content\images\location.png" />
@@ -692,6 +703,7 @@
     <Content Include="Areas\ADMIN\Views\ContactUs\Edit.cshtml" />
     <Content Include="Areas\ADMIN\Views\ContactUs\Index.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Sitemap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

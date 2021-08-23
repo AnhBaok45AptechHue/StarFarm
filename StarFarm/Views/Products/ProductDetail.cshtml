@@ -7,7 +7,7 @@
 <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
 <link href="~/Content/css/animate.css" rel="stylesheet" />
 <link href="~/Content/css/productDetail.css" rel="stylesheet" />
-<h2>ProductDetail</h2>
+
 
 <div class="container">
     <ul class="breadcrumb " style="--bs-breadcrumb-divider:'>';">
@@ -71,8 +71,8 @@
                 <h4 class="price">current price: <strong id="price">@Model.Price $</strong></h4>
 
                 <div class="action">
-                    <a href="#" type="button" class="btn modalToAddCard" onclick=" addtocartdetail();"> ADD TO CART </a>
-                    <a href="cart.html" type="button" class="btn buy"> BUY NOW </a>
+                    <a href="@Url.Action("AddToCart", new { controller = "Cart", id =Model.Product_Id })" type="button" class="btn modalToAddCard" onclick=" addtocartdetail();"> ADD TO CART </a>
+                    <a href="@Url.Action("Index", new { controller = "Cart", id =Model.Product_Id })" type="button" class="btn buy"> BUY NOW </a>
 
                 </div>
                 <div id="description">

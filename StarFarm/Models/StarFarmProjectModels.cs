@@ -16,6 +16,7 @@ namespace StarFarm.Models
         public virtual DbSet<ContactU> ContactUs { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public object  CartItem { get; internal set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
