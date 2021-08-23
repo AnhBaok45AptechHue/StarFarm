@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     <link href="@ViewBag.Title -My ASP.Net Application" />
 
     @Styles.Render("~/Content/CSS/font-roboto.css")
@@ -39,10 +39,10 @@
             <div>
                 <ul>
 
-                    <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
-                    <li><a href="HTML/aboutUs.html"><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
-                    <li><a href="HTML/products.html"><i class="fa fa-product-hunt" aria-hidden="true"></i> PRODUCTS</a></li>
-                    <li><a href="HTML/contactUs.html"><i class="fa fa-telegram" aria-hidden="true"></i> CONTACT US</a></li>
+                    <li>@Html.ActionLink("Home","Index","Home")<i class="fa fa-home" aria-hidden="true"></i></li>
+                    <li>@Html.ActionLink("PRODUCTS", "Index", "Products")<i class="fa fa-info" aria-hidden="true"></i></li>
+                    <li>@Html.ActionLink("ABOUT US", "About", "Home")<i class="fa fa-product-hunt" aria-hidden="true"></i></li>
+                    <li>@Html.ActionLink("CONTACT US", "Contact", "Home")<i class="fa fa-telegram" aria-hidden="true"></i> CONTACT US</a></li>
                     <li>
                         <form class="d-flex justify-content-between pt-3">
                             <input id="myInput" class="form-control me-2" type="text " placeholder="Search">
