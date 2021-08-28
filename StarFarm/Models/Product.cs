@@ -35,12 +35,18 @@
         [Required]
         [StringLength(50)]
         public string Image { get; set; }
-
+        [Required]
+        [StringLength(50)]
+        public string Image2 { get; set; }
+        [StringLength(50)]
         // Không mapping field này với DB (do trong DB không có)
         [NotMapped]
-        public HttpPostedFileBase UploadFile { get; set; }
+        public HttpPostedFileBase UploadFile1 { get; set; }
+
         [NotMapped]
-        public string FeaturedImage { get; set; }
+        public HttpPostedFileBase UploadFile2 { get; set; }
+       
+       
         //{
         //    get
         //    {
