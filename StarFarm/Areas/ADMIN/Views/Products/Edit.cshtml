@@ -7,10 +7,10 @@
 <h2>Edit</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Product</h4>
         <hr />
@@ -47,6 +47,9 @@
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
+            <script>
+                CKEDITOR.replace('Description');
+            </script>
         </div>
 
         <div class="form-group">
@@ -60,20 +63,26 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Featured Image</label>
             <div class="col-md-10">
-               
-                    @Html.TextBoxFor(model => model.UploadFile1, new { @type = "file" })
-               
+
+                @Html.TextBoxFor(model => model.UploadFile1, new { @type = "file" })
+
             </div>
-           
+            <div class="col-md-4">
+                <img class="thumbnail img-thumbnail" src="@Model.Image" />
+            </div>
+
         </div>
 
         <div class="form-group">
             <label class="col-md-2 control-label">Featured Image</label>
             <div class="col-md-10">
-              @Html.TextBoxFor(model => model.UploadFile2, new { @type = "file" })
-               
+                @Html.TextBoxFor(model => model.UploadFile2, new { @type = "file" })
+
             </div>
-           
+            <div class="col-md-4">
+                <img class="thumbnail img-thumbnail" src="@Model.Image2" />
+            </div>
+
         </div>
 
         <div class="form-group">

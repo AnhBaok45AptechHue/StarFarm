@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using StarFarm.Models;
 
-namespace StarFarm.Areas.ADMIN.Controllers
+namespace StarFarm.Areas.ADMIN
 {
     public class ProductsController : Controller
     {
