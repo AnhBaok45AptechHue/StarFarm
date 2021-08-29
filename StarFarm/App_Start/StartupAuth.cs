@@ -3,6 +3,7 @@ using Microsoft.Owin.Security.Cookies;
 using Owin;
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 [assembly: OwinStartup(typeof(StarFarm.App_Start.StartupAuth))]
 
