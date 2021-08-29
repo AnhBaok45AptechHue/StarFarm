@@ -4,9 +4,9 @@ using Microsoft.Owin.Security.Cookies;
 using Owin;
 using System;
 
-[assembly: OwinStartup(typeof(SimpleShop.App_Start.StartupAuth))]
+[assembly: OwinStartup(typeof(StarFarm.App_Start.StartupAuth))]
 
-namespace SimpleShop.App_Start
+namespace StarFarm.App_Start
 {
     public class StartupAuth
     {

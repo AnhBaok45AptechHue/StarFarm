@@ -13,11 +13,7 @@ namespace StarFarm.Migrations
         
         string IMigrationMetadata.Id
         {
-<<<<<<< HEAD:StarFarm/Migrations/202108290350522_StarFarm.Designer.cs
             get { return "202108290350522_StarFarm"; }
-=======
-            get { return "202108281513502_StarFarm"; }
->>>>>>> 913bdece3df65f2d18d77ecee04bfb1f16a08c46:StarFarm/Migrations/202108281513502_StarFarm.Designer.cs
         }
         
         string IMigrationMetadata.Source

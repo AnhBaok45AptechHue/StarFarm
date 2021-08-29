@@ -153,7 +153,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StartupAuth.cs" />
-    <Compile Include="App_Start\StartUpOwn.cs" />
     <Compile Include="Areas\ADMIN\ADMINAreaRegistration.cs" />
     <Compile Include="Areas\ADMIN\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\ADMIN\Controllers\CustomersController.cs" />
@@ -499,16 +498,6 @@
     <Content Include="Content\JS\jquery-3.3.1.min.js" />
     <Content Include="Content\JS\login.js" />
     <Content Include="Content\JS\popper.min.js" />
-    <Content Include="Content\JS\productAgroProducts.js" />
-    <Content Include="Content\JS\productCookingOils&amp;Oils.js" />
-    <Content Include="Content\JS\productDetail.js" />
-    <Content Include="Content\JS\productFruitPulps.js" />
-    <Content Include="Content\JS\productNutritiousCereals.js" />
-    <Content Include="Content\JS\productPulses.js" />
-    <Content Include="Content\JS\productRiceAndRiceProducts.js" />
-    <Content Include="Content\JS\products.js" />
-    <Content Include="Content\JS\productSpicesAndCondiments.js" />
-    <Content Include="Content\JS\productWheatAndWheatFlour.js" />
     <Content Include="Content\JS\script.js" />
     <Content Include="Content\JS\WOW.js" />
     <Content Include="Content\JS\wow.min.js" />
@@ -993,8 +982,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202108290350522_StarFarm.resx">
-      <DependentUpon>202108290350522_StarFarm.cs</DependentUpon>
     <EmbeddedResource Include="Migrations\202108281513502_StarFarm.resx">
       <DependentUpon>202108281513502_StarFarm.cs</DependentUpon>
     </EmbeddedResource>
