@@ -1,8 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+
+using StarFarm.Models;
+using StarFarm.Models.ViewModel;
 
 namespace StarFarm.Controllers
 {
@@ -20,49 +27,35 @@ namespace StarFarm.Controllers
             return View();
         }
 
-        // GET: Account/Create
-        public ActionResult Create()
+        /// <summary>
+        /// Hiển thị màn hình Login
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SignIn()
         {
-            return View();
         }
 
-        // POST: Account/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
         {
+            {
+
+                {
+                }
+                return RedirectToAction("Index", "Products", new { area = "Admin" });
+
+            }
+
+        }
+
+        {
+            // Initialization.    
+            var claims = new List<Claim>();
             try
             {
-                // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
             }
-            catch
             {
-                return View();
             }
-        }
-
-        // GET: Account/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Account/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: Account/Delete/5
         public ActionResult Delete(int id)
@@ -70,20 +63,14 @@ namespace StarFarm.Controllers
             return View();
         }
 
-        // POST: Account/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
             }
-            catch
             {
-                return View();
             }
+            return RedirectToAction("SignIn");
         }
+
     }
 }

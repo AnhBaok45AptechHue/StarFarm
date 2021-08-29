@@ -1,5 +1,6 @@
 namespace StarFarm.Migrations
 {
+    using global::StarFarm.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;

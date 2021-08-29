@@ -7,21 +7,17 @@ namespace StarFarm.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class StarFarm_init : IMigrationMetadata
+    public sealed partial class StarFarm : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(StarFarm_init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(StarFarm));
         
         string IMigrationMetadata.Id
         {
-<<<<<<< HEAD:StarFarm/Migrations/202108291339578_StarFarm_init.Designer.cs
-            get { return "202108291339578_StarFarm_init"; }
-=======
 <<<<<<< HEAD:StarFarm/Migrations/202108290350522_StarFarm.Designer.cs
             get { return "202108290350522_StarFarm"; }
 =======
             get { return "202108281513502_StarFarm"; }
 >>>>>>> 913bdece3df65f2d18d77ecee04bfb1f16a08c46:StarFarm/Migrations/202108281513502_StarFarm.Designer.cs
->>>>>>> 2f31033413120423b7e4ee4c7485f2e9f276329b:StarFarm/Migrations/202108281513502_StarFarm.Designer.cs
         }
         
         string IMigrationMetadata.Source

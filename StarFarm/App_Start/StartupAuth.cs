@@ -1,13 +1,10 @@
-﻿
-using Microsoft.Owin;
-
+﻿using Microsoft.Owin;
+using Microsoft.Owin.Security.Cookies;
 using Owin;
 using System;
 using System.Threading.Tasks;
 
-[assembly: OwinStartup(typeof(Shop.App_Start.StartupAuth))]
 
-namespace Shop.App_Start
 {
     public class StartupAuth
     {
@@ -17,6 +14,13 @@ namespace Shop.App_Start
             // Enable the application to use a cookie to store information for the signed in user   
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider   
             // Configure the sign in cookie   
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                LoginPath = new PathString("/Account/SignIn"),
+                LogoutPath = new PathString("/Account/SignOut"),
+                ExpireTimeSpan = TimeSpan.FromMinutes(300)
+            });
 
             //app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
             // Uncomment the following lines to enable logging in with third party login providers   
