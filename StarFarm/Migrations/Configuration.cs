@@ -4,16 +4,15 @@ namespace StarFarm.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<StarFarmProjectModels>
+    internal sealed class Configuration : DbMigrationsConfiguration<StarFarm.Models.StarFarmProjectModels>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(StarFarmProjectModels context)
+        protected override void Seed(StarFarm.Models.StarFarmProjectModels context)
         {
             //  This method will be called after migrating to the latest version.
 

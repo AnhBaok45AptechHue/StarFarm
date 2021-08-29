@@ -7,13 +7,13 @@ namespace StarFarm.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class changepricetodouble : IMigrationMetadata
+    public sealed partial class StarFarm_init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changepricetodouble));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(StarFarm_init));
         
         string IMigrationMetadata.Id
         {
-            get { return "202108201208543_change price to double"; }
+            get { return "202108291339578_StarFarm_init"; }
         }
         
         string IMigrationMetadata.Source
