@@ -39,5 +39,7 @@ namespace StarFarm.Models
                 .Property(e => e.Category_Id)
                 .HasPrecision(5, 0);
         }
+
+        public System.Data.Entity.DbSet<StarFarm.Models.User> Users { get; set; }
     }
 }

@@ -34,5 +34,11 @@ namespace StarFarm.Controllers
 
             return View();
         }
+
+        public ActionResult Login()
+        {
+            ViewBag.Mesage = "Your login page";
+            return View();
+        }
     }
 }

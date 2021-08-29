@@ -13,7 +13,7 @@
     @Styles.Render("~/Content/CSS/font-awesome.min.css")
     @Styles.Render("~/Content/CSS/animate.css")
     @Styles.Render("~/Content/css/navigation.css")
-    @Scripts.Render("~Content/CSS/main.css")
+    @Styles.Render("~Content/CSS/main.css")
     @RenderSection("css", false)
 
     @Scripts.Render("~/Content/JS/jquery-3.3.3.min.js")
@@ -50,66 +50,11 @@
                         </form>
                     </li>
                     <li>
-                        <div id="cartcontent" class="d-flex justify-content-between pt-3">
-
-                            <button id="cart" class="btn  " data-bs-toggle="modal" data-bs-target="#myModal">
-                                <i class="fas fa-cart-arrow-down"></i>
-                            </button>
-                            <div id="myModal" class="modal ">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Shopping Cart </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body  ">
-
-                                            <table class="table table-responsive table-borderless">
-                                                <thead>
-
-                                                <th>&nbsp;</th>
-                                                <th>Product</th>
-                                                <th>Price</th>
-                                                <th>Quantity</th>
-                                                <th>total</th>
-                                                <th>&nbsp;</th>
-                                                </thead>
-                                                <tbody id="modalCardDetail">
-                                                </tbody>
-
-                                            </table>
-                                            <div class="totals">
-                                                <div class="totals-item">
-                                                    <label>Subtotal</label>
-                                                    <div class="totals-value cart-subtotal"></div>
-                                                </div>
-                                                <div class="totals-item">
-                                                    <label>Tax (5%)</label>
-                                                    <div class="totals-value" id="cart-tax"></div>
-                                                </div>
-                                                <div class="totals-item">
-                                                    <label>Shipping</label>
-                                                    <div class="totals-value" id="cart-shipping">6.17</div>
-                                                </div>
-                                                <div class="totals-item totals-item-total">
-                                                    <label>Grand Total</label>
-                                                    <div class="totals-value" id="cart-total"></div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn buy">Buy</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                        <a href="@Url.Action("Index", new { controller = "Cart"})">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </a>
                     </li>
-                    <li><a href="HTML/login.html" class="d-flex justify-content-between pt-3"><i class="fas fa-user-circle"></i></a></li>
+                    <li><a href="@Url.Action("Login", new { controller = "Account" })" class="d-flex justify-content-between pt-3"><i class="fas fa-user-circle"></i></a></li>
 
                 </ul>
             </div>
@@ -165,12 +110,12 @@
                         <div class="col px-3 quick-links">
                             <h5 class="fw-bold">Quick Links</h5>
                             <ul class="list-unstyled text-light">
-                                <li><a href="HTML/sitemap.html">Sitemap</a></li>
-                                <li><a href="HTML/aboutUs.html">About Us</a></li>
-                                <li><a href="HTML/products.css">Shopping now</a></li>
-                                <li><a href="HTML/contactUs.html">Contact Us</a></li>
-                                <li><a href="HTML/login.html">Register</a></li>
-                                <li><a href="HTML/cart.html">Cart</a></li>
+                                <li><a href="~/Views/Home/Sitemap.cshtml">Sitemap</a></li>
+                                <li><a href="~/Views/Home/aboutUs.cshtml">About Us</a></li>
+                                <li><a href="~/Views/Products/Index.cshtml">Shopping now</a></li>
+                                <li><a href="~/Views/Home/contactUs.html">Contact Us</a></li>
+                                <li><a href="~/Views/Home/Login.cshtml">Register</a></li>
+                                <li><a href="~/Views/Cart/Index.cshtml">Cart</a></li>
 
 
 

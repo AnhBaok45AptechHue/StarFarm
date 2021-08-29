@@ -19,7 +19,7 @@ main {
 }
 
 .about-section{
-    background: url(../images/ff.jpg) no-repeat left;
+    background: url(../image/ff.jpg) no-repeat left;
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
