@@ -16,7 +16,7 @@
     @Styles.Render("~Content/CSS/main.css")
     @RenderSection("css", false)
 
-    @Scripts.Render("~/Content/JS/jquery-3.3.3.min.js")
+    @Scripts.Render("~/Content/JS/jquery-3.3.1.min.js")
     @Scripts.Render("~/Content/JS/popper.min.js")
     @Scripts.Render("~/Content/libary/bootstrap/js/kit.fontawesome.js")
     @Scripts.Render("~/Content/libary/bootstrap/js/bootstrap.bundle2.js")
@@ -50,6 +50,15 @@
                         </form>
                     </li>
                     <li>
+                        
+
+                            <a  href="@Url.Action("Index", new { controller = "Cart"})">
+                                <i class="fas fa-cart-arrow-down"></i>
+                            </a>
+                        
+
+                        
+
                         <a href="@Url.Action("Index", new { controller = "Cart"})">
                             <i class="fas fa-cart-arrow-down"></i>
                         </a>
@@ -77,16 +86,16 @@
                             <!-- class="fa-ul mt-1" -->
                             <h5 class="fw-bold">Us Products - </h5>
                             <p class="fw-bold">
-                                <a href="HTML/productNutritiousCereals.html">Nutritious cereals</a>
-                                <a href="HTML/productPulses.html">Pulses</a>
-                                <a href="HTML/productSpicesAndCondiments.html">Spices and Condiments</a>
-                                <a href="HTML/productCookingOils&Oils.html">Cooking Oils</a>
-                                <a href="HTML/productFruitPulps.html">Fruit Pulps</a>
-                                <a href="HTML/productAgroProducts.html">Agro Products</a>
-                                <a href="HTML/productCookingOils&Oils.html">Oils</a>
-                                <a href="HTML/productWheatAndWheatFlour.html">Wheat and Wheat Flour</a>
-                                <a href="HTML/productRiceAndRiceProducts.html">Rice and Rice products</a>
-                                <a href="HTML/products.html">And so on</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 4 })">Nutritious cereals</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 5 })">Pulses</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 7 })">Spices and Condiments</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 2 })">Cooking Oils</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 3 })">Fruit Pulps</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 1 })">Agro Products</a>
+                             
+                                <a href="@Url.Action("Index", new { controller = "Products", id = 8 })">Wheat and Wheat Flour</a>
+                                <a href="@Url.Action("Index", new { controller = "Products", id =  6})">Rice and Rice products</a>
+                                <a href="@Url.Action("Index", new { controller = "Products",  })">And so on</a>
                             </p>
                         </div>
                     </div>

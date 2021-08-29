@@ -16,7 +16,7 @@
 <div class="container">
     <ul class="breadcrumb" style="--bs-breadcrumb-divider:'>';">
         <li class="breadcrumb-item">
-            <a class="text-decoration-none link-dark" href="../index.html">
+            <a class="text-decoration-none link-dark" href="@Url.Action("Index", new { controller = "Home"})">
                 <i class="fas fa-home"></i>Home
             </a>
         </li>
@@ -47,10 +47,10 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr class="align-middle alert border-bottom product" role="alert">
+                        <tr class="align-middle alert border-bottom product" role="alert" >
 
                             <td class="text-center">
-                                <img class="" src="~/Content/image/@item.ImageUrl" alt="@item.ProductName">
+                                <img class="" src="@item.ImageUrl" alt="@item.ProductName">
                             </td>
                             <td>
                                 <div>
@@ -64,7 +64,7 @@
                             <td class="d-flex product-quantity">
                                 <input class="input" min="0" value="1" type="number" id="itemPrice">
                             </td>
-                            <td>  <span class="product-line-price" id="itemTotal"></span></td>
+                            <td> <span class="product-line-price" id="itemTotal" ></span></td>
                             <td class="product-removal">
                                 <a href="@Url.Action("RemoveFromCart", new { controller = "Cart", id =item.ProductId })" class="btn ">
                                     <span class="fas fa-times"></span>
@@ -102,11 +102,11 @@
             </div>
             <div class="checkOut">
                 <button type="button" class="btn continute">
-                    <a href="products.html"> <i class="fas fa-cart-arrow-down"></i> Continue Shopping</a>
+                    <a href="@Url.Action("Index", new { controller = "Home"})"> <i class="fas fa-cart-arrow-down"></i> Continue Shopping</a>
                 </button>
 
                 <button type="button" class="btn btn-success buy ">
-                    <a href="login.html">Checkout</a>
+                    <a href="@Url.Action("Index", new { controller = "Login"})">Checkout</a>
                 </button>
             </div>
         </div>
